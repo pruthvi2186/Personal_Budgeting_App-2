@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: #121212;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.light-mode {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f1f1f;
+    border-bottom: 2px solid #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00bcd4;
+    animation: fadeIn 1s ease-out;
+}
+
+.theme-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: #555;
+}
+
+.light-mode .theme-btn {
+    background: #ddd;
+    color: #333;
+}
+
+/* Cards */
+.card {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .card {
+    background: #fff;
+    color: #333;
+}
+
+/* Form */
+.form-section {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #00bcd4;
+}
+
+.form input, .form select, .submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.light-mode .form-section, .light-mode .form input, .light-mode .form select, .light-mode .submit-btn {
+    background: #fff;
+    color: #333;
+}
+
+/* History Section */
+.history {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #444;
+}
+
+table tr:hover {
+    background-color: #555;
+}
+
+/* Chart Section */
+.chart-section {
+    display: none; /* Initially hidden */
+    max-width: 300px; /* Limit the max width */
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+#expense-chart {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.remove-btn {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+}
+
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+
+#clear-history {
+    background-color: #f44336;
+    color: white;
+}
+
+#clear-history:hover {
+    background-color: #d32f2f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card, .form-section {
+        margin: 10px;
+    }
+
+    .theme-btn {
+        padding: 8px 16px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
